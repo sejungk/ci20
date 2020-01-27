@@ -1,0 +1,295 @@
+body, html {
+      background-color: #FFFDF5;
+      margin:0px;
+      padding:0px;
+      height:100%;
+      width: 100%;
+      cursor: crosshair; 
+    }
+
+    a {
+      cursor: crosshair;
+    }
+    
+  .fade {
+    opacity: 0;
+  }
+
+  .container { 
+    height: 100%;
+    width: 100%;
+    position: relative;
+    }
+
+  .title {
+  font-family: 'helvetica';
+  font-weight: bold;
+  letter-spacing: 5px;
+  font-size: 3em;
+  text-align:center;
+  position: absolute;
+  right: 3%;
+  width:46%;
+  top:5rem;
+  line-height: 2em;
+  opacity: 1;
+  animation-name: slideUp;
+  animation-duration: 3s; 
+}
+
+@keyframes slideUp {
+  0% {
+    position: absolute;
+    opacity: 0;
+  }
+  10% {
+    position: absolute;
+    top:9rem;
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+.intro{
+  position: absolute;
+  font-family: 'roboto';
+  font-weight: lighter;
+  font-size: 24px;
+  width:46%;
+  right:3%;
+  top:28rem;
+  line-height: 38px;
+  animation-name: fadeSlideUp;
+  animation-duration: 3s;
+}
+
+@keyframes fadeSlideUp {
+  0% {
+    position: absolute;
+    top: 100rem;
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+  .cover {
+  width: 45%;
+  position: absolute;
+  top:0rem;
+}
+  .step1 {
+    position: absolute;
+    width:30%;
+    right:10rem;
+    top:60rem;
+  }
+.step1-text {
+  text-align:center;
+  position: absolute;
+  font-family:roboto;
+  font-weight: lighter;
+  font-size: 15px;
+  left:20rem;
+  top:67rem;
+  line-height: 25px;
+}
+.step2 {
+    position: absolute;
+    width:30%;
+    left:10rem;
+    top:88rem;
+  }
+
+  .step2-text {
+  text-align:center;
+  position: absolute;
+  font-family:roboto;
+  font-weight: lighter;
+  font-size: 15px;
+  left:60rem;
+  top:94rem;
+  line-height: 35px;
+}
+
+.step3 {
+    position: absolute;
+    width:30%;
+    right:10rem;
+    top:116rem;
+  }
+
+  .step3-text {
+  text-align:center;
+  position: absolute;
+  font-family:roboto;
+  font-weight: lighter;
+  font-size: 15px;
+  left:20rem;
+  top:122rem;
+  line-height: 35px;
+}
+
+.step4 {
+    position: absolute;
+    width:30%;
+    left:10rem;
+    top:144rem;
+  }
+  .step4-text {
+  text-align:center;
+  position: absolute;
+  font-family:roboto;
+  font-weight: lighter;
+  font-size: 15px;
+  left:60rem;
+  top:150rem;
+  line-height: 35px;
+}
+
+.step5 {
+    position: absolute;
+    width:30%;
+    right:10rem;
+    top:172rem;
+  }
+
+  .step5-text {
+  text-align:center;
+  position: absolute;
+  font-family:roboto;
+  font-weight: lighter;
+  font-size: 15px;
+  left:20rem;
+  top:178rem;
+  line-height: 35px;
+}
+
+.step6 {
+    position: absolute;
+    width:30%;
+    left:10rem;
+    top:200rem;
+  }
+
+  .step6-text {
+  text-align:center;
+  position: absolute;
+  font-family:roboto;
+  font-weight: lighter;
+  font-size: 15px;
+  left:67rem;
+  top:208rem;
+  line-height: 35px;
+}
+
+.step7 {
+    position: absolute;
+    width:30%;
+    right:10rem;
+    top:228rem;
+  }
+
+.step7-text {
+  text-align:center;
+  position: absolute;
+  font-family:roboto;
+  font-weight: lighter;
+  font-size: 15px;
+  left:20rem;
+  top:235rem;
+  line-height: 35px;
+}
+
+.step8 {
+    position: absolute;
+    width:30%;
+    left:10rem;
+    top:256rem;
+  }
+
+.step8-text {
+  text-align:center;
+  position: absolute;
+  font-family:roboto;
+  font-weight: lighter;
+  font-size: 15px;
+  left:64rem;
+  top:262rem;
+  line-height: 35px;
+}
+
+.step9 {
+    position: absolute;
+    width:30%;
+    right:10rem;
+    top:284rem;
+  }
+
+.step9-text {
+  text-align:center;
+  position: absolute;
+  font-family:roboto;
+  font-weight: lighter;
+  font-size: 15px;
+  left:20rem;
+  top:291rem;
+  line-height: 35px;
+}
+
+.step10 {
+    position: absolute;
+    width:30%;
+    left:10rem;
+    top:312rem;
+  }
+
+  .step10-text {
+  text-align:center;
+  position: absolute;
+  font-family:roboto;
+  font-weight: lighter;
+  font-size: 15px;
+  left:68rem;
+  top:320rem;
+  line-height: 35px;
+}
+
+.back {
+    font-family:'helvetica';
+    position: absolute;
+    width:100%;
+    top:340rem;
+    margin-bottom: 70px;
+  }
+
+a  {
+  position: absolute;
+  text-decoration: none;
+  font-family: 'roboto';
+  font-weight: bold;
+  color: black;
+  right: 6rem;
+  bottom:0%;
+
+}
+a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.4s ease-in 0s;
+}
+
+ a:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+} 

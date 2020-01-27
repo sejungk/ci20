@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Microwave History</title>
+    <meta charset="UTF-8">
+   <link rel="stylesheet" href="history.css">
+
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  crossorigin="anonymous"></script>
+
+   <script>
+$(document).ready(function() {
+    $(window).scroll( function(){
+        $('.fade').each( function(){
+            
+            var bottom_of_div = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_page = $(window).scrollTop() + $(window).height();
+        
+            if( bottom_of_page > bottom_of_div ){
+                $(this).animate({'opacity':'1'},1400);
+                    
+            }
+            
+        }); 
+    
+    });
+    
+});
+
+   </script>
+
+
+   </script>
+</head>
+	<body>
+		<div class="container">
+			
+		<div class="title">A BRIEF HISTORY <br> OF THE MICROWAVE
+		</div>
+
+		<div class="intro">Originally used as a war weapon in the mid 20th century, Microwaves have come a long way since its initial development. This technology completely revolutionized how food is prepared in the common kitchen.</div>
+	</div>
+
+<img src="../images/history-cover.jpg" class="cover"/>
+		
+<img src="../images/history-1.jpg" class="step1 fade"/>
+
+<div class="step1-text fade">MICROWAVES WERE DEVELOPED AFTER WWII DURING THE 1940'S AND THEY WERE INITIALLY USED IN HIGH FREQUENCY RADAR TECHOLOGIES
+</div>
+
+<img src="../images/history-2.jpg" class="step2 fade"/>
+
+<div class="step2-text fade">PERCY SPENCER, AN ENGINEER AT RAYTHEON, ACCIDENTLY DISCOVERED THE HEATING CAPABILITIES OF MICROWAVE TECHNOLOGY WHILE HE WAS TESTING A MAGNETRON IN HIS LAB
+</div>
+
+<img src="../images/history-3.jpg" class="step3 fade"/>
+
+<div class="step3-text fade">HE IS BEST KNOWN AS ONE OF THE FIRST PEOPLE TO EXPERIMENT WITH THE IDEA OF USING MICROWAVES AS A CULINARY TOOL
+</div>
+
+<img src="../images/history-41.jpg" class="step4 fade"/>
+
+<div class="step4-text fade">AT FIRST, MICROWAVES WERE ONLY INTENDED FOR RESTAURANT USE DUE TO ITS LARGE SIZE AND EXPENSIVE PRICE TAG.</div>
+
+<img src="../images/history-5.jpg" class="step5 fade"/>
+
+<div class="step5-text fade">HOWEVER, COMPANIES BEGAN PRODUCING SMALLER AND MORE AFFORDABLE MODELS OF THE MICROWAVE FOR RESIDENTIAL USE AROUND THE 1970'S
+</div>
+
+<img src="../images/history-6.jpg" class="step6 fade"/>
+
+<div class=step6-text>NOW, MICROWAVES ARE VIRTUALLY FOUND EVERYWHERE AND THEY’RE A POPULAR CULINARY APPLIANCE THAT IS USED TO PREPARE A WIDE VARIETY OF FOOD</div>
+
+<div class="back">
+	<a href="../index.html">BACK</a>
+</div>
+</div>
+</div>
+
+	</body>
+		

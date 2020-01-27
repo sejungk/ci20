@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Microwave Guide</title>
+    <meta charset="UTF-8">
+   <link rel="stylesheet" href="guide.css">
+
+   <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  crossorigin="anonymous"></script>
+
+<script>
+$(document).ready(function() {
+    $(window).scroll( function(){
+        $('.fade').each( function(){
+            
+            var bottom_of_div = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_page = $(window).scrollTop() + $(window).height();
+        
+            if( bottom_of_page > bottom_of_div ){
+                $(this).animate({'opacity':'1'},1400);
+                    
+            }
+            
+        }); 
+    
+    });
+    
+});
+
+   </script>
+</head>
+	<body>
+		<div class="container">
+			
+		<div class="title">A STEP BY STEP GUIDE <br> ON HOW TO USE A<br> MICROWAVE 
+		</div>
+		<div class="intro">Need a quick and simple way to heat up your food? Microwaves are a great option! They're quick, convienient, and very easy to use! </div>
+	</div>
+
+<img src="../images/cover.jpg" class="cover"/>
+		
+<img src="../images/1.jpg" class="step1 fade"/>
+
+<div class="step1-text fade">STEP 1: <br>OPEN THE MICROWAVE</div>
+
+<img src="../images/2.jpg" class="step2 fade"/>
+
+<div class="step2-text fade">STEP 2: <br>PLACE YOUR FOOD IN THE MICROWAVE</div>
+
+<img src="../images/3.jpg" class="step3 fade"/>
+
+<div class="step3-text fade">STEP 3: <br>CLOSE THE DOOR</div>
+
+<img src="../images/4.jpg" class="step4 fade"/>
+
+<div class="step4-text fade">STEP 4: <br> TYPE IN THE DESIRED HEATING TIME</div>
+
+<img src="../images/5.jpg" class="step5 fade"/>
+
+<div class="step5-text fade">STEP 5: <br> PRESS START</div>
+
+<img src="../images/6.jpg" class="step6 fade"/>
+
+<div class="step6-text fade">STEP 6: <br>WAIT...</div>
+ 
+<img src="../images/7.jpg" class="step7 fade"/>
+
+<div class="step7-text fade">STEP 7: <br>ONCE TIME'S UP...</div>
+
+<img src="../images/8.jpg" class="step8 fade"/>
+
+<div class="step8-text fade">STEP 8: <br>OPEN THE MICROWAVE</div>
+
+<img src="../images/9.jpg" class="step9 fade"/>
+
+<div class="step9-text fade">STEP 9: <br> TAKE OUT YOUR FOOD<BR> (CAREFUL IT'S HOT!)</div>
+
+<img src="../images/10.jpg" class="step10 fade"/>
+
+<div class="step10-text fade">STEP 10: <br> AND ENJOY!</div>
+
+<div class="back">
+	<a href="../index.html">BACK</a>
+</div>
+</div>
+</div>
+
+	</body>
+		
