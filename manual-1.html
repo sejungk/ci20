@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>How to Use a Microwave</title>
+	<link rel="stylesheet" href="manual-1.css">
+	<link href="https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css?family=Electrolize&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,800,900&display=swap" rel="stylesheet">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	
+	<script>
+	// main page animation
+
+	$(document).ready(function () {
+    setTimeout(function(){
+        $('.main').slideDown(1200);
+    }, 700);
+});
+	// microwave fade in animation
+
+	$(window).scroll(function () {
+    console.log($(window).scrollTop());
+    var firstPage = $(".main").height();
+    var secondPage = $(window).height();
+
+    var start = 0;
+    var animationStart = (firstPage - secondPage) + start;
+
+    if ($(window).scrollTop() >= animationStart) {
+        $('.microwave').css('visibility', 'visible').hide().fadeIn(2000);
+        $(this).off('scroll');
+    }
+});
+	//Scroll down text fade in 
+
+	$(window).scroll(function () {
+    console.log($(window).scrollTop());
+    var firstPage = $(".main").height();
+    var secondPage = $(window).height();
+
+    var start = -10000;
+    var animationStart = (firstPage - secondPage) + start;
+
+    if ($(window).scrollTop() >= animationStart) {
+        $('.scroll-text').css('visibility', 'visible').delay(2000).hide().fadeIn(2000);
+        $(this).off('scroll');
+    }
+});
+
+	$(window).scroll(function () {
+    console.log($(window).scrollTop());
+    var firstPage = $(".main").height();
+    var secondPage = $(window).height();
+
+    var start = -10000;
+    var animationStart = (firstPage - secondPage) + start;
+
+    if ($(window).scrollTop() >= animationStart) {
+        $('.scroll-textbox').css('visibility', 'visible').delay(2000).hide().fadeIn(2000);
+        $(this).off('scroll');
+    }
+});
+
+	// microwave button function
+
+	function step1() {
+	 document.getElementById("original-text").innerHTML = "Step 1: Make sure the microwave is on";
+	}
+
+	function step2() {
+	 document.getElementById("original-text").innerHTML = "Step 2: Open the microwave";
+	}
+
+	function step3() {
+	 document.getElementById("original-text").innerHTML = "Step 3: Place your food in the microwave";
+	}
+
+	function step4() {
+	 document.getElementById("original-text").innerHTML = "Step 4: Close the Microwave door";
+	}
+
+	function step5() {
+	 document.getElementById("original-text").innerHTML = "Step 5: Type in the desired heating time";
+	}
+
+	function step6() {
+	 document.getElementById("original-text").innerHTML = "Step 6: Wait until time is up";
+	}
+
+	function step7() {
+	 document.getElementById("original-text").innerHTML = "Step 7: Open the Microwave once the food is done heating";
+	}
+
+	function step8() {
+	 document.getElementById("original-text").innerHTML = "Step 8: If the food is not warm enough, place it back in the Microwave";
+	}
+
+	function step9() {
+	 document.getElementById("original-text").innerHTML = "Step 9: Once the food is warm enough, take it out of the microwave";
+	}
+
+	function step10() {
+	 document.getElementById("original-text").innerHTML = "Step 10: And enjoy!";
+	}
+
+	function end() {
+	 document.getElementById("original-text").innerHTML = "Continue scrolling down to view all the steps again";
+	}
+
+	function start() {
+	 document.getElementById("original-text").innerHTML = "Press any button to begin";
+	}
+
+
+	
+	</script>
+</head>
+<body>
+<div class="main">
+	<div class="title">
+		<h1>How to reheat
+		Food <br> in the Microwave...</h1>
+	</div>
+	<div class="subtext">
+		Scroll down below to view a 10 step guide on how to reheat food in the microwave.
+	</div>
+</div>
+<div class="page-2">
+
+	<div class="microwave">
+	<div class="keypad-border">
+		<div class="clock"><!-- 12:45 --></div>
+		<div class= "keypad">
+
+			<button  class= "1 button" id="step1"  type="button" onclick="step1()">1</button>
+
+			<button  class= "2 button" id="step2"  type="button" onclick="step2()">2</button>
+
+			<button  class= "3 button" id="step3"  type="button" onclick="step3()">3</button>
+
+			<button  class= "4 button" id="step4"  type="button" onclick="step4()">4</button>
+
+			<button  class= "5 button" id="step5"  type="button" onclick="step5()">5</button>
+
+			<button  class= "6 button" id="step6"  type="button" onclick="step6()">6</button>
+
+			<button  class= "7 button" id="step7"  type="button" onclick="step7()">7</button>
+
+			<button  class= "8 button" id="step8"  type="button" onclick="step8()">8</button>
+
+			<button  class= "9 button" id="step9"  type="button" onclick="step9()">9</button>
+
+			<button  class= "end button" id="end"  type="button" onclick="end()">END</button>
+
+			<button  class= "10 button" id="step10"  type="button" onclick= "step10()">0</button>
+
+			<button  class= "start button" id="start"  type="button" onclick="start()">START</button>	
+			
+		</div>
+	</div>
+	<div class="door"></div>
+	<div class="line"></div>
+	<div class="outline">
+		<div class= "screen">
+			<div class= "text" id="original-text">
+			To begin press any button on the keypad
+		</div>
+	</div>
+</div>
+</div>
+</div>
+<div class="scroll-textbox">
+	<div class=scroll-text>
+	Scroll down to view the steps written out!
+	</div>
+</div>
+<div class="third-page">
+	<div class="text-1">1</div>
+	<div class=step1-text>
+		Make sure the microwave is on
+	</div>
+	<div class="text-2">2</div>
+	<div class=step2-text>
+		Open the microwave 
+	</div>
+	<div class="text-3">3</div>
+	<div class=step3-text>
+		Place your food in the microwave
+	</div>
+	<div class="text-4">4</div>
+	<div class=step4-text>
+		Close the Microwave door
+	</div>
+	<div class="text-5">5</div>
+	<div class=step5-text>
+		Type in the desired heating time
+	</div>
+	<div class="text-6">6</div>
+	<div class=step6-text>
+		Wait until time is up
+	</div>
+	<div class="text-7">7</div>
+	<div class=step7-text>
+		Open the Microwave once the food is done heating
+	</div>
+	<div class="text-8">8</div>
+	<div class=step8-text>
+		If the food is not warm enough, place it back in the Microwave
+	</div>
+	<div class="text-9">9</div>
+	<div class=step9-text>
+		Once the food is warm enough, take it out of the microwave
+	</div>
+	<div class="text-10">10</div>
+	<div class=step10-text>
+		And enjoy!
+	</div>
+</div>
+
+
+
+
+</body>
+</html>
