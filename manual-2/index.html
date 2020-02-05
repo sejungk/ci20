@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<link href="https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,800,900&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css?family=Electrolize&display=swap" rel="stylesheet">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	
+	<script>
+
+	function countdown(minutes) {
+	    var seconds = 60;
+	    var mins = minutes
+
+    function timer() {
+        var counter = document.getElementById("countdown");
+        var current_minutes = mins-1
+        seconds--;
+        counter.innerHTML = current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds);
+        if( seconds > 0 ) {
+            setTimeout(timer, 1000);
+        } else {
+            if(mins > 1){
+                countdown(mins-1);           
+            }
+        }
+    }
+    timer();
+	}
+	
+	countdown(5);
+
+	function step1() {
+	 document.getElementById("original-text").innerHTML = "Make sure the microwave is on";
+	}
+		function number1() {
+		document.getElementById("step-title").innerHTML = "1";
+		}
+
+	function step2() {
+	 document.getElementById("original-text").innerHTML = "Open the microwave and place your food inside";
+	}
+
+		function number2() {
+		document.getElementById("step-title").innerHTML = "2";
+		}
+
+	function step3() {
+	 document.getElementById("original-text").innerHTML = "Close the Microwave door";
+	}
+
+		function number3() {
+		document.getElementById("step-title").innerHTML = "3";
+		}
+
+	function step4() {
+	 document.getElementById("original-text").innerHTML = "Type in the desired heating time";
+	}
+		function number4() {
+		document.getElementById("step-title").innerHTML = "4";
+		}
+
+	function step5() {
+	 document.getElementById("original-text").innerHTML = "Wait until time is up";
+	}
+		function number5() {
+		document.getElementById("step-title").innerHTML = "5";
+		}
+
+	function step6() {
+	 document.getElementById("original-text").innerHTML = "Open the Microwave once the food is done heating";
+	}
+		function number6() {
+		document.getElementById("step-title").innerHTML = "6";
+		}
+
+	function step7() {
+	 document.getElementById("original-text").innerHTML = "If the food is not warm enough, place it back in the Microwave";
+	}
+		function number7() {
+		document.getElementById("step-title").innerHTML = "7";
+		}
+
+	function step8() {
+	 document.getElementById("original-text").innerHTML = "Once the food is warm enough, take it out of the microwave";
+	}
+		function number8() {
+		document.getElementById("step-title").innerHTML = "8";
+		}
+	function step9() {
+	 document.getElementById("original-text").innerHTML = "And enjoy!";
+	}
+		function number9() {
+		document.getElementById("step-title").innerHTML = "9";
+		}
+ 
+	</script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="step-wrapper">
+			<div id= "step-title">1</div>
+			<div class= "original-text" id="original-text">press start</div>
+		</div>
+		<div class="nav">
+	    	<div id="countdown">5:00</div>
+	    	<div class="number-wrapper">
+
+	    	<button  class= "number" id="step1"  type="button" onclick="step1(); number1();">1</button>
+			<button  class= "number" id="step2"  type="button" onclick="step2(); number2();">2</button>
+			<button  class= "number" id="step3"  type="button" onclick="step3(); number3();">3</button>
+			<button  class= "number" id="step4"  type="button" onclick="step4(); number4();">4</button>
+			<button  class= "number" id="step5"  type="button" onclick="step5(); number5();">5</button>
+			<button  class= "number" id="step6"  type="button" onclick="step6(); number6();">6</button>
+			<button  class= "number" id="step7"  type="button" onclick="step7(); number7();">7</button>
+			<button  class= "number" id="step8"  type="button" onclick="step8(); number8();">8</button>
+			<button  class= "number" id="step9"  type="button" onclick="step9(); number9();">9</button>
+		    
+		    </div>
+ 
+ <script>
+
+ 	$(function() {
+    $('.number').addClass('hidden').hide();
+    $('#start').click(function() {
+        if ($('.number').hasClass('hidden')) {
+            $('.number').removeClass('hidden').fadeIn(1000);
+        }
+    });
+});
+//  	$(function() {
+//     $('#original-text').addClass('hidden').hide();
+//     $('#start').click(function() {
+//         if ($('#original-text').hasClass('hidden')) {
+//             $('#original-text').removeClass('hidden').fadeIn(1000);
+//         }
+//     });
+// });
+ 	$(function() {
+    $('#step-title').addClass('hidden').hide();
+    $('.number').click(function() {
+        if ($('#step-title').hasClass('hidden')) {
+            $('#step-title').removeClass('hidden').fadeIn(1000);
+        }
+    });
+});
+
+ </script>
+			<button id="start" onclick= "countdown(5);">Start</button>
+		</div>
+	</div>
+	 <div id ="background"></div>
+  	</div>
+
+
+<script>
+	var string = "";
+    var counter = 0
+
+    while (counter <8000) {
+    counter = counter + 1;
+    string = string + " . ";
+    }
+
+    document.getElementById("background").innerHTML = string;
+</script>
+	
+</body>
+</html>

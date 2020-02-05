@@ -1,0 +1,181 @@
+	body,html {
+			height: 100%;
+			width: 100%;
+			margin: 0;
+			overflow-y: hidden;
+		}
+
+	#background {
+			background-color: #585858;
+			height: 100%;
+			position: absolute;
+			top:0;
+			width: 75%;
+			z-index: -1;
+		}
+		.container {
+			margin:0;
+			height: 100%;
+			width: 100%;
+		}
+
+		.nav {
+			right: 4%;
+			top: 3%;
+			width: 15%;
+			height: 90%;
+			position: fixed;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+		}
+		@media (max-width: 800px){
+			.nav {
+				height: 45%;
+				top: 30%;
+		}
+		}
+
+		#countdown {
+			font-family: 'ZCOOL QingKe HuangYou';
+			font-size: 100px;
+			text-shadow: 0px 0px 8px #54d009;
+			color: #00ec03;
+			text-align: center;
+			width: 100%;
+			margin: 0px -12px;
+		}
+		@media (max-width: 800px){
+			#countdown{
+			font-size: 4em;
+			margin: 0px -7px;
+		}
+		}
+
+		.number {
+			height: 25%;
+			width: 30%;
+			font-family: 'arial';
+			font-size: 80px;
+			margin: none;
+			text-align: center;
+			color: black;
+			text-decoration: none;
+			border: none;
+			background-color: transparent;
+		}
+		@media (max-width: 800px){
+			.number{
+			font-size: 1.8em;
+		}
+		}
+		.number:hover {
+			background-color: #dcdcdc;
+			transition-duration: 1s;
+		}
+
+		.number-wrapper {
+			margin: 100px 0px;
+			height: 55%;
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			color: black;
+		}
+		@media (max-width: 800px){
+			.number-wrapper{
+			margin-top: 40px;
+			height:40%;
+			
+		}
+		}
+
+		#start {
+			position: absolute;
+			text-decoration: none;
+			border: none;
+			align-content: center;
+			margin: -20px 0 0 -50px;
+			font-family: arial;
+			text-transform: uppercase;
+			font-size: 20px;
+			bottom: 0;
+			margin-right: auto;
+			margin-left: auto;
+			background-color: white;
+			width:100%;
+			height: 15%;
+			border: none;
+		}
+
+		#start:hover {
+			background-color: #dcdcdc;
+			transition-duration: 2s;
+		}
+			.original-text {
+			font-family: 'Electrolize', sans-serif;
+			text-transform: uppercase;
+			font-size: 50px;
+			z-index: 2;
+			height: 100%
+			width: 55px;
+			margin-top: auto;
+			margin-bottom: auto;
+			flex:7;
+			padding-right: 10%;
+			padding-left:10%;
+			color: #a4f702;
+			text-shadow: 0px 0px 8px #54d009;
+		}
+
+		@media (max-width: 800px){
+			.original-text{
+				font-size: 	1.8em;
+				vertical-align: middle;
+				padding-top: 15%;
+		}
+		}
+		#step-title {
+			height: 100%
+			width:25%;
+			font-family: 'Electrolize', sans-serif;
+			font-weight: 700;
+			font-size: 	180px;
+			flex: 2;
+			color: #a4f702;
+			text-shadow: 0px 0px 8px #54d009;
+		}
+		@media (max-width: 800px){
+			#step-title{
+			padding-top: 230px;
+			font-size: 7em;
+		}
+		}
+
+		.step-wrapper{
+			position: relative;	
+			height: 100%;
+			width:75%;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			margin: none;
+			align-content: center;
+			text-align: center;
+			justify-content: flex-start;
+		}
+		@media (max-width: 800px){
+			.step-wrapper{
+				flex-direction: column;
+				justify-content: space-around;
+
+		}
+		
+
+		button:focus {outline:0;}
+
+		
+		
+
+		
