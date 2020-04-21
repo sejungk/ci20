@@ -1,0 +1,41 @@
+ 
+ body {
+  margin: 0;
+  overflow: hidden;
+  }
+  canvas {
+  	/*z-index: 1;*/
+    height: 100%;
+    width: 100%;
+  }
+
+ #infobox {
+  visibility: hidden;
+  z-index: 100;
+  position: fixed;
+  top: 25px;
+  left:25px;
+  width: 250px;
+  height: 190px;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 400;
+  color: white;
+  background-color: black;  
+  padding-top:15px;
+  font-size: 22px;
+  border: 15px solid white;
+  padding-bottom: 8px;
+  }
+
+  .text {
+  	padding-bottom: 5px;
+  	padding-top: 5px;
+  	margin-left: 13px;
+  }
+  #int {
+  	font-size: 40px;
+  	font-weight: 500;
+  	margin-bottom: 8px;
+  	padding-top: 6px;
+  }
+
