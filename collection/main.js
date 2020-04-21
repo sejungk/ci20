@@ -185,7 +185,7 @@ function buildIndex (TLE_data) {
 //ORBIT CONTROL
     var controls = new THREE.OrbitControls(camera);
     controls.autoRotate = true;
-    controls.autoRotateSpeed = 2.5;
+    controls.autoRotateSpeed = 3;
     controls.target = new THREE.Vector3(0, 0, 0);
     scene.add(camera);
 
