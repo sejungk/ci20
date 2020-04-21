@@ -3,6 +3,8 @@ var random = Math.random() * (.01 -0);
 var xmlhttp = new XMLHttpRequest();
 var satellite_debris = "TLE.json"
 var TLE_data = [];
+var i = 0;
+var random =  (Math.random() * 360 ) * Math.PI / 180; 
 
   //SCENE
     canvas = document.getElementById("canvas");
@@ -131,6 +133,10 @@ function buildIndex (TLE_data) {
         cylinder.position.y = satelliteY;
         cylinder.position.z = satelliteZ;
 
+        // cylinder.rotation.x = random;
+        // cylinder.rotation.y = random;
+        // cylinder.rotation.z = random;
+
         cylinder.rotation.x += Math.random() * (.02 -0);
         cylinder.rotation.y -= Math.random() * (.02 -0);
         cylinder.rotation.z += Math.random() * (.02 -0);
@@ -152,6 +158,9 @@ function buildIndex (TLE_data) {
       octahedron.position.x = satelliteX;
       octahedron.position.y = satelliteY;
       octahedron.position.z = satelliteZ;
+      // octahedron.rotation.x = random;
+      // octahedron.rotation.y = random;
+      // octahedron.rotation.z = random;
       // console.log("OCT", satelliteX);
       // console.log("OCT", satelliteY);
       // console.log("OCT", satelliteZ);
@@ -162,7 +171,7 @@ function buildIndex (TLE_data) {
      if (typeof tle1 == 'string' || tle1 instanceof String || typeof tle2 ==
      'string' || tle2 instanceof String) {
 //MOVE TO NEXT 2 LINES OF TLE
-     j = j + 1 ;
+     j = j + 1 ;  
         }
     }
 };
@@ -180,10 +189,10 @@ function buildIndex (TLE_data) {
     controls.target = new THREE.Vector3(0, 0, 0);
     scene.add(camera);
 
-var raycaster = new THREE.Raycaster();
-var mouse = new THREE.Vector2(), INTERSECTED;
-var tooltipDisplayTimeout;
-var latestMouseProjection;
+    var raycaster = new THREE.Raycaster();
+    var mouse = new THREE.Vector2(), INTERSECTED;
+    var tooltipDisplayTimeout;
+    var latestMouseProjection;
 
       function render() {
         requestAnimationFrame(render);
@@ -196,7 +205,7 @@ var latestMouseProjection;
         outlinemesh.rotation.z -= 0.0001; 
         raycaster.setFromCamera( mouse, camera );   
         var intersects = raycaster.intersectObjects( scene.children );
-      
+
        if ( intersects.length > 0 ){
  //IF CURRENT OBJ IS NOT BEING STORED...
         if ( intersects[ 0 ].object != INTERSECTED )
@@ -210,41 +219,46 @@ var latestMouseProjection;
         INTERSECTED.currentHex = INTERSECTED.material.color.getHex();
 //SET NEW HOVER COLOR ON NEW SHAPE
         INTERSECTED.material.color.setHex( 0x00EAFF);
-        // document.getElementById("infobox").style.visibility = "visible";
-        // changeText();
-        
+        document.getElementById("infobox").style.visibility = "visible";
     }
-}
-//IF MOUSE IS NOT HOVERING OVER OBJ...
-else 
-{
-//RESTORE DEFAULT COLOR OF LAST SHAPE 
-    if ( INTERSECTED )
-        INTERSECTED.material.color.setHex( INTERSECTED.currentHex );
-        document.getElementById("infobox").style.visibility = "hidden"
-//REMOVE LAST SHAPE'S OBJ REFERENCE
-    INTERSECTED = null;
-}
-        renderer.render(scene, camera);
-      }
+  }
+  //IF MOUSE IS NOT HOVERING OVER OBJ...
+  else 
+  {
+  //RESTORE DEFAULT COLOR OF LAST SHAPE 
+      if ( INTERSECTED )
+          INTERSECTED.material.color.setHex( INTERSECTED.currentHex );
+          document.getElementById("infobox").style.visibility = "hidden"
+  //REMOVE LAST SHAPE'S OBJ REFERENCE
+      INTERSECTED = null;
+  }
+          renderer.render(scene, camera);
+        }
        render();
 
-function changeText() {
-      i = Math.floor(Math.random() * 10);   
-      var int = TLE_data[i].INTLDES;
-      var name = TLE_data[i].OBJECT_NAME;
-      var type = TLE_data[i].OBJECT_TYPE;
-      document.getElementById("int").innerHTML = int;
-      document.getElementById("name").innerHTML = name;
-      document.getElementById("type").innerHTML = type;
-      }
-    
 
 function onMouseMove( event ) {
   mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
   mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
 }
-
 window.addEventListener( 'mousemove', onMouseMove, false );
 
+function changeText() {
+      var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutationRecord) {
+            i++;
+            var int = TLE_data[i].INTLDES;
+            var name = TLE_data[i].OBJECT_NAME;
+            var type = TLE_data[i].OBJECT_TYPE;
+            document.getElementById("int").innerHTML = int;
+            document.getElementById("name").innerHTML = name;
+            document.getElementById("type").innerHTML = type;
+            });    
+        });
+
+        var target = document.getElementById('infobox');
+        observer.observe(target, { attributes : true, attributeFilter : ['style'] 
+        }) 
+      }
+changeText();
 
