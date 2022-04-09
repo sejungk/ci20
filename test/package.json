@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "jspredict": "^1.1.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "satellite.js": "^4.0.0",
     "tle.js": "^3.1.0"
   }
